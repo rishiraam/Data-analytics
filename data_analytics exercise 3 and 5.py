@@ -131,7 +131,7 @@ for item in df['average_rating']:
         if (item in freq): 
             freq[item] += 1
         else: 
-            freq[item] = 1plt.show()
+            freq[item] = plt.show()
 
 
 data.columns
