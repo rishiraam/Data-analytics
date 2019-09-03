@@ -81,27 +81,27 @@ def geomean(xs):
 geomean(data.num_pages)
 
 
-# In[ ]:
+# In[94]:
 
 
 data.plot()
 
 
-# In[ ]:
+# In[95]:
 
 
 data.iloc[:10].plot.box()
 plt.show()
 
 
-# In[ ]:
+# In[96]:
 
 
 data.iloc[:10].plot.bar()
 plt.show()
 
 
-# In[ ]:
+# In[97]:
 
 
 freq = {} 
@@ -120,13 +120,24 @@ plt.bar(key,value)
 plt.show()
 
 
-# In[ ]:
+# In[98]:
+plt.scatter(value, key)
+plt.title('Average Rating Distribution')
+plt.xlabel('Count')
+plt.ylabel('Rating')
+freq = {} 
+#df['average_rating']=df['average_rating'].astype('float64')
+for item in df['average_rating']: 
+        if (item in freq): 
+            freq[item] += 1
+        else: 
+            freq[item] = 1plt.show()
 
 
 data.columns
 
 
-# In[94]:
+# In[99]:
 
 
 for i in data.text_reviews_count:
@@ -144,7 +155,7 @@ for i in data.text_reviews_count:
     
 
 
-# In[96]:
+# In[100]:
 
 
 gmean=stats.gmean(data.num_pages)
